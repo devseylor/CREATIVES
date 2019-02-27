@@ -1,0 +1,16 @@
+@font-face{
+    font-family: 'myriadregular';
+    src: url('../fonts/MyriadProCondRegular.ttf');
+}
+@font-face{
+    font-family: 'gothambold';
+    src: url('../fonts/GothamPro-Bold.ttf');
+}
+@font-face{
+    font-family: 'gothamedium';
+    src: url('../fonts/GothamPro-Medium.ttf');
+}
+@font-face{
+    font-family: 'gothambook';
+    src: url('../fonts/Gotham\ Book\ Regular.otf')
+}
