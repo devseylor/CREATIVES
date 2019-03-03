@@ -159,6 +159,7 @@ header hr{
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+    box-sizing: border-box;
 }
 .au{
     max-width: 1600px;
@@ -220,9 +221,12 @@ header hr{
 /* ==============section3========================== */
 .blog{
     display: flex;
-    width: 100%;
-    min-height: 1017px;
+    /* min-height: 1017px; */
     background: white;
+}
+.blog_wrap img{
+    width: 100%;
+    max-width: 280px;
 }
 .blog .container .bigt h2{
     margin-top: 92px;
@@ -252,9 +256,12 @@ header hr{
     bottom: 100px;
 }
 .bloggers{
-    width: 270px;
-    min-height: 510px;
+    display: flex;
+    height: 510px;
     margin-bottom: 112px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .bloggers p{
     min-width: 270px;
@@ -299,17 +306,18 @@ header hr{
 .app{
     background: url("../images/bg_section_02.jpg") no-repeat;
     width: 100%;
-    min-height: 900px;
+    height: 871px;
     background-size: cover;
 }
 .freebies{
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
 }
 .text_bee{
     display: flex;
     flex-direction: column;
-    margin-top: 156px;
+    justify-content: flex-start;
 }
 .text_bee h5{
     font-size: 25px;
@@ -341,20 +349,28 @@ header hr{
     background: #5993b2;
 }
 .first{
-    width: 370px;
+    width: 100%;
+    max-width: 370px;
     height: 38px;
 }
 .second{
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: 38px;
 }
 .theerd{
-    width: 428px;
+    width: 100%;
+    max-width: 428px;
     height: 38px;
 }
 .phone{
-    margin-top: 100px;
-    margin-left: 200px;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.phone img{
+    position: relative;
+    top: 99px;
 }
 /* ==============section6=============================== */
 .team{
@@ -377,8 +393,8 @@ header hr{
     font-family: "gothamedium";
     position: relative;
     bottom: 180px;
-    left: auto;
-    right: auto;
+    left: 0;
+    right: 0;
     text-align: center;
     text-transform: uppercase
 }
@@ -390,6 +406,11 @@ header hr{
     position: relative;
     bottom: 100px;
 }
+.teameat{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 .teameat img{
     display: inline-block;
     width: 100%;
@@ -400,8 +421,10 @@ header hr{
     background: white;
     position: relative;
     bottom: 75px;
-    left: 30px;;
+    left:0;
+    right: 0;
     display: flex;
+    align-self: center;
     flex-direction: column;
     align-items: center;
 }
@@ -443,7 +466,8 @@ header hr{
     color: white;
 }
 .firstform{
-    width: 370px;
+    width: 100%;
+    max-width: 370px;
     height: 48px;
     background: 0;
     margin-right: 28px;
@@ -507,6 +531,10 @@ footer{
     justify-content: center;
 }
 
+.flexible-img{
+    max-width: 100%;
+    max-height: 100%;
+}
 
 
 
@@ -542,12 +570,54 @@ footer{
 
 
 /* ============== Медиа запросы ======================== */
-@media screen and (max-width:1199.9px){}
-@media screen and (max-width:1023.9px){
+@media screen and (max-width:1199.9px){
+    .blog_wrpa{
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
-@media screen and (max-width:991.9px){}
-@media screen and (max-width:767.9px){}
+@media screen and (max-width:1023.9px){
+    .blog_wrpa{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width:991.9px){
+    .text, .scroll{
+        display: none;
+    }
+}
+@media screen and (max-width:767.9px){
+    .text_bee{
+        display: flex;
+        flex-direction: column;
+        margin-top: 140px;
+    }
+    .phone{
+        display: none;
+    }
+
+    .info{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .freebies{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
 @media screen and (max-width:575.9px){
+    .blog_wrpa{
+        display:flex;
+        /* flex-direction: column;
+        align-items: center;
+        justify-content: center; */
+    }
+    .info{
+        display: flex;
+        flex-direction: column;
+    }
     header .menu{
         align-items: flex-start;
         flex-direction: column;
@@ -557,5 +627,6 @@ footer{
         width: 100%;
     }
 }
-@media screen and (max-width:480px){}
+@media screen and (max-width:480px){
+}
 @media screen and (max-width:320px){}
