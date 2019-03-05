@@ -163,7 +163,7 @@ header hr{
 }
 .au{
     max-width: 1600px;
-    min-height: 447px;
+    /* min-height: 299px; */
     display: block;
     font-family: 'gothambook';
     /* border: 1px solid green; */
@@ -172,7 +172,7 @@ header hr{
 .au img{
     display: inline-block;
     width: 100%;
-    min-height: 500px;
+    height: 100%;
 }
 .dark{
     background: #222222;
@@ -301,6 +301,9 @@ header hr{
     padding-right: 34px;
     font-size: 70px;
     color: white;
+}
+.blog .row{
+    margin: 0;
 }
 /* ============section5======================================== */
 .app{
@@ -447,6 +450,9 @@ header hr{
     background-size: cover;
     display: flex;
 }
+.form .row{
+    margin: 0;
+}
 .form .container .bigt h2{
     margin-top: 92px;
     text-align: center;
@@ -585,6 +591,12 @@ footer{
 @media screen and (max-width:991.9px){
     .text, .scroll{
         display: none;
+    }
+    .text_dark{
+        padding: 15px 15px;
+    }
+    .light_side{
+        padding: 15px 15px;
     }
 }
 @media screen and (max-width:767.9px){
